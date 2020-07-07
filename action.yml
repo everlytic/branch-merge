@@ -4,7 +4,7 @@ inputs:
   github_token:
     description: 'Token to authenticate with GitHub'
     required: true
-    default: ${{ secrets.GITHUB_TOKEN }}
+    default: ${{ github.token }}
   source_ref:
     description: 'Branch or SHA1 ref that you are merging into the target_branch.'
     required: true
