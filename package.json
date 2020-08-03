@@ -1,11 +1,17 @@
 {
-  "name": "merge-branch",
+  "name": "branch-merge",
   "version": "1.0.0",
   "description": "Merge branches using GitHub API",
   "main": "dist/index.js",
   "scripts": {
+    "build": "ncc build index.js"
   },
-  "keywords": ["github", "merge", "branch", "automate"],
+  "keywords": [
+    "github",
+    "merge",
+    "branch",
+    "automate"
+  ],
   "author": "everlytic",
   "license": "MIT",
   "repository": {
@@ -14,5 +20,8 @@
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
   }
 }

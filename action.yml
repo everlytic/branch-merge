@@ -2,16 +2,20 @@ name: 'Branch Merge'
 description: 'Merges a source branch, or SHA1 ref into a target branch'
 inputs:
   github_token:
-    description: 'Token to authenticate with GitHub'
+    description: 'Token used to authenticate with GitHub when performing the merge command.'
     required: true
     default: ${{ github.token }}
   source_ref:
-    description: 'Branch or SHA1 ref that you are merging into the target_branch.'
+    description: 'Branch name or Ref that you wish to merge into the target_branch.'
     required: true
     default: ${{ github.ref }}
   target_branch:
-    description: 'Branch you are merging into'
+    description: 'Branch you are merging the source ref into.'
     required: true
+  commit_message_template:
+    description: 'Template to generate the commit message, see README.md for more info'
+    required: false
+    default: 'Merged {source_ref} into {target_branch}.'
 runs:
   using: 'node12'
   main: 'dist/index.js'
