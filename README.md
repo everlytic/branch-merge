@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: everlytic/branch-merge@1.1.0
+      - uses: everlytic/branch-merge@1.1.2
         with:
           github_token: ${{ github.token }}
           source_ref: ${{ github.ref }}
