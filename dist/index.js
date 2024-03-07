@@ -30879,7 +30879,7 @@ async function run() {
             .replace('{source_ref}', source_ref)
             .replace('{target_branch}', target_branch);
 
-        await octokit.repos.merge({
+        await octokit.rest.repos.merge({
             owner: repo.owner,
             repo: repo.repo,
             base: target_branch,
